@@ -1,5 +1,8 @@
 FROM oven/bun:debian
 
+RUN mkdir -p /home/bun/app/data \
+  && chown -R bun:bun /home/bun/app/data
+
 VOLUME /home/bun/app/data
 
 RUN apt-get update \
