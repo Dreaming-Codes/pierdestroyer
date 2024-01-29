@@ -6,7 +6,7 @@ const USER_ID = "393755216723@c.us"
 
 const client = new Client({
     authStrategy: new LocalAuth({
-        dataPath: "/data"
+        dataPath: "./data"
     }),
     puppeteer: {
         args: ['--no-sandbox'],

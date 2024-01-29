@@ -1,6 +1,6 @@
 FROM oven/bun:debian
 
-VOLUME /data
+VOLUME /home/bun/app/data
 
 RUN apt-get update \
   && apt-get install -y \
@@ -45,7 +45,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /home/bun/app
 
 # Copy your application files into the container
 COPY . .
