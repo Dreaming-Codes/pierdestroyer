@@ -50,11 +50,6 @@ WORKDIR /app
 # Copy your application files into the container
 COPY . .
 
-# Install your Node.js application dependenciestra le aziende che maggiormente utilizzano il kanban è la Toyota[
 RUN bun install
 
-# Build your application
-RUN bun start
-
-# Start your Node.js application
-CMD ["bun", "src/index.ts"]
+CMD ["bun", "start"]
